@@ -1,0 +1,44 @@
+.header {
+  position: sticky;
+}
+
+.nav {
+  display: flex;
+  padding: 0.312em 0;
+}
+
+/* -------------------HEADER LEFT------------------- */
+
+.header__left {
+  display: flex;
+  align-items: center;
+  flex-basis: 40%;
+}
+
+.header__search {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  height: 3.4rem;
+  margin-left: 0.2em;
+  background-color: #eef3f7;
+  width: 55%;
+}
+
+.header__search input {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.header__search input::placeholder {
+  padding-left: 0.5em;
+  color: #606163;
+}
+
+/* -------------------HEADER RIGHT------------------ */
+
+.header__right {
+  flex-basis: 60%;
+}
