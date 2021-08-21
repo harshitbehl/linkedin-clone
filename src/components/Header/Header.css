@@ -1,5 +1,8 @@
 .header {
   position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 0.1px solid lightgray;
 }
 
 .nav {
@@ -23,7 +26,7 @@
   height: 3.4rem;
   margin-left: 0.2em;
   background-color: #eef3f7;
-  width: 55%;
+  width: 60%;
 }
 
 .header__search input {

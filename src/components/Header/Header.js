@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import NavBar from "./NavBar";
 
 function Header() {
   return (
@@ -15,7 +16,9 @@ function Header() {
           </div>
         </div>
 
-        <div className="header__right"></div>
+        <div className="header__right">
+          <NavBar />
+        </div>
       </nav>
     </header>
   );

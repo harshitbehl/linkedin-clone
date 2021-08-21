@@ -1,4 +1,6 @@
 /* --------------------FONT IMPORTS-------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+/* font-family: 'Lato', sans-serif; */
 
 /* ----------------------CSS RESET--------------------- */
 
@@ -13,6 +15,7 @@
 html {
   /* 1rem = 10px */
   font-size: 62.5%;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -23,6 +26,10 @@ body {
   width: 80%;
   min-width: 1200px;
   margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* ---------------------TYPOGRAPHY--------------------- */

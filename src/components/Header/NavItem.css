@@ -1,0 +1,23 @@
+.header__navitem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: #5b696b;
+  font-weight: 400;
+}
+
+.header__navitem:hover {
+  color: black;
+}
+
+.navitem__title {
+  transform: scale(0.8);
+}
+
+.navitem__avatar {
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+}
