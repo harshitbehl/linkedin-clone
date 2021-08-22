@@ -18,17 +18,93 @@
   height: 6rem;
   width: 100%;
   object-fit: cover;
-  margin-bottom: -2rem;
+  margin-bottom: -3.5rem;
 }
 
 .sidebar__avatar {
-  height: 5rem;
+  height: 7rem !important;
+  width: 7rem !important;
   border: 2px solid white;
-  
+  margin-bottom: 2rem;
+}
+
+.sidebar__top > h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar__designation {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #666666;
+  word-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar__stats {
+  border-top: 1px solid rgba(211, 211, 211, 0.3);
+  width: 100%;
+  padding: 1.4rem 1rem;
+}
+
+.sidebar__stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.sidebar__stat > p {
+  font-size: 1.2rem;
+  color: #666666;
+  font-weight: 700;
+  word-spacing: 0.1rem;
+}
+
+.sidebar__stat > .sidebar__statNumber {
+  color: #0b65c2;
+}
+
+.sidebar__stats > p {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transform: translateY(-30%);
 }
 
 .sidebar__bottom {
   background-color: white;
   border-radius: 5%;
   width: 100%;
+  padding-bottom: 2rem;
+}
+
+.sidebar__bottom > p {
+  font-size: 1.3rem;
+  /* margin-bottom: 1rem; */
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.sidebar__recentItem {
+  display: flex;
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+}
+
+.sidebar__recentItem:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.sidebar__hash {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #5e5e5e;
+  margin-right: 1rem;
+}
+
+.sidebar__recentItem > p {
+  color: #666666;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transform: translateY(10%);
 }
