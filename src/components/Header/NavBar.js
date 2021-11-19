@@ -6,8 +6,19 @@ import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import BusinessCenterIcon from "@material-ui/icons/BusinessCenter";
 import TextsmsRoundedIcon from "@material-ui/icons/TextsmsRounded";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import { useDispatch } from "react-redux";
+import { logout } from "../../features/userSlice";
+import { auth } from "../../firebase";
 
 function NavBar() {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+
+    auth.signOut();
+  };
+
   return (
     <ul className="header__navbar">
       <NavItem
@@ -32,7 +43,10 @@ function NavBar() {
       />
       <NavItem
         title="Me"
-        avatar="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+        onClick={logoutOfApp}
+        avatar={
+          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+        }
       />
     </ul>
   );

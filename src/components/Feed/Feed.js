@@ -8,39 +8,55 @@ import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from "./Post";
 import "./Feed.css";
 import { db } from "../../firebase";
-import firebase from "firebase";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
+import {
+  collection,
+  addDoc,
+  onSnapshot,
+  serverTimestamp,
+  query,
+  orderBy,
+} from "firebase/firestore";
 
 function Feed() {
+  const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
   // First Render/ Mount Only
   useEffect(() => {
-    db.collection("posts")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) =>
-        setPosts(
-          snapshot.docs.map((doc) => ({
-            id: doc.id,
-            data: doc.data(),
-          }))
-        )
-      );
+    const getPosts = () => {
+      try {
+        onSnapshot(
+          query(collection(db, "posts"), orderBy("timestamp", "desc")),
+          (snapshot) => {
+            setPosts(
+              snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+            );
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getPosts();
   }, []);
 
   const sendPost = (event) => {
     event.preventDefault();
 
-    db.collection("posts").add({
-      name: "Harshit Behl",
+    addDoc(collection(db, "posts"), {
+      name: user.displayName,
       description: "Full Stack Web Developer",
       message: input,
-      photoUrl: "",
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      photoUrl: user.photoUrl || "",
+      timestamp: serverTimestamp(),
     });
 
     setInput("");
   };
+  console.log(user.displayName);
 
   return (
     <div className="feed">
