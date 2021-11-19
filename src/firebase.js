@@ -1,18 +1,20 @@
-import firebase from "firebase";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyA7LkPXbrr2pys4OGA6jtU00aI3bcfvsQo",
-  authDomain: "linkedin-clone-7474d.firebaseapp.com",
-  projectId: "linkedin-clone-7474d",
-  storageBucket: "linkedin-clone-7474d.appspot.com",
-  messagingSenderId: "664123411400",
-  appId: "1:664123411400:web:5a18c30d4c7cc932610efd",
-  measurementId: "G-RFHRXGTKY7",
+  apiKey: "AIzaSyCgLy1BtTEFANQ4zV0ZDawWdsRYHx1RxJY",
+  authDomain: "linkedin-clone-6a449.firebaseapp.com",
+  projectId: "linkedin-clone-6a449",
+  storageBucket: "linkedin-clone-6a449.appspot.com",
+  messagingSenderId: "519498039556",
+  appId: "1:519498039556:web:811238eb8fa246fd221051",
+  measurementId: "G-7FFD4HECJE",
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
+const auth = getAuth(firebaseApp);
 
 export { db, auth };
