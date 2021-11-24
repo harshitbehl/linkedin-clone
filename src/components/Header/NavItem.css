@@ -21,3 +21,13 @@
   width: 2.8rem;
   border-radius: 50%;
 }
+
+/* -------------------MEDIA QUERIES------------------ */
+
+@media (max-width: 768px) {
+  .header__navitem .MuiSvgIcon-root {
+    font-size: 2.2rem !important;
+  }
+}
+
+

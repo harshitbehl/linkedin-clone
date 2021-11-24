@@ -46,3 +46,31 @@
 .header__right {
   flex-basis: 60%;
 }
+
+/* -------------------MEDIA QUERIES------------------ */
+
+@media (max-width: 768px) {
+  .header__search {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .header__left {
+    flex-basis: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .header__search {
+    width: 100%;
+  }
+
+  .header__right {
+    flex-basis: 100%;
+    padding: 1rem 0;
+  }
+}

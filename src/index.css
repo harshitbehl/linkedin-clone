@@ -32,4 +32,12 @@ ul {
   list-style-type: none;
 }
 
-/* ---------------------TYPOGRAPHY--------------------- */
+/* -------------------MEDIA QUERIES------------------- */
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 95%;
+  }
+}
+
+

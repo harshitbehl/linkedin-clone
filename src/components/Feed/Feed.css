@@ -59,3 +59,18 @@
   border-left: 0;
   border-right: 0;
 }
+
+/* -------------------MEDIA QUERIES------------------ */
+
+@media (max-width: 768px) {
+  .feed {
+    flex-basis: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feed {
+    flex-basis: 100%;
+    padding: 4rem 0;
+  }
+}

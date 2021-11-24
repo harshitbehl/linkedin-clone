@@ -49,3 +49,17 @@
   font-size: 1.2rem;
   margin-top: 0.5rem;
 }
+
+/* -------------------MEDIA QUERIES------------------ */
+
+@media (max-width: 768px) {
+  .widgets {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .widgets {
+    display: none;
+  }
+}
